@@ -4,20 +4,17 @@ import mysql.connector
 
 
 # Get MySql Password
-def getMySqlPassword():
-    if os.path.isfile("./extra/password.txt"):
-        with open("./extra/password.txt", "r") as f:
-            PASSWORD = f.read()
-    else:
-        PASSWORD = ""
+if os.path.isfile("password.txt"):
+    with open("password.txt", "r") as f:
+        PASSWORD = f.read()
+else:
+    PASSWORD = ""
 
-    if PASSWORD == "":
-        PASSWORD = input("Enter MySql Password: ")
-        with open("password.txt", "w") as f:
-            f.write(PASSWORD)
-            print("Password saved to password.txt")
-
-    return PASSWORD
+if PASSWORD == "":
+    PASSWORD = input("Enter MySql Password: ")
+    with open("password.txt", "w") as f:
+        f.write(PASSWORD)
+        print("Password saved to password.txt")
 
 
 # Connect to MySql
@@ -25,7 +22,7 @@ def getMySqlPassword():
 mydb = mysql.connector.connect(
     host="localhost",
     user="root",
-    password=getMySqlPassword(),
+    password=PASSWORD,
     database="restaurant_manager",
 )
 mycursor = mydb.cursor(buffered=True)

@@ -3,17 +3,17 @@ import os
 
 
 # Get MySql Password
-if os.path.isfile("Extra/password.txt"):
-    with open("Extra/password.txt", "r") as f:
+if os.path.isfile("password.txt"):
+    with open("password.txt", "r") as f:
         PASSWORD = f.read()
 else:
     PASSWORD = ""
 
 if PASSWORD == "":
     PASSWORD = input("Enter MySql Password: ")
-    with open("Extra/password.txt", "w") as f:
+    with open("password.txt", "w") as f:
         f.write(PASSWORD)
-        print("Password saved to Extra/password.txt")
+        print("Password saved to password.txt")
 
 
 # Creating database

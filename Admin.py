@@ -106,7 +106,7 @@ def showDishes():
             "||"
             + str(pos).center(4)
             + "||"
-            + dish.center(50)
+            + dish.title().center(50)
             + "||"
             + (str(price) + " ₹").center(38)
             + "||"

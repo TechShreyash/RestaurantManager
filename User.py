@@ -55,7 +55,7 @@ def showDishes():
             "||"
             + str(pos).center(4)
             + "||"
-            + dish.center(50)
+            + dish.title().center(50)
             + "||"
             + (str(price) + " ₹").center(38)
             + "||"
@@ -87,7 +87,7 @@ def orderDish():
             "||"
             + str(pos).center(4)
             + "||"
-            + dish.center(50)
+            + dish.title().center(50)
             + "||"
             + (str(price) + " ₹").center(38)
             + "||"
@@ -151,7 +151,7 @@ def orderDish():
             "||"
             + str(pos).center(4)
             + "||"
-            + DISH.center(50)
+            + DISH.title().center(50)
             + "||"
             + str(QUANTITY).center(18)
             + "||"
