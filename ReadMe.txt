@@ -11,8 +11,8 @@
 
 ### Usage
 
--   Run Admin.py to run app as admin
--   Run User.py to run app as user
 -   Run Setup.py to setup database and tables
 -   Run Reset.py to reset database and tables
 -   Run AddDefaultDish.py to add test dishes to database
+-   Run Admin.py to run app as admin
+-   Run User.py to run app as user

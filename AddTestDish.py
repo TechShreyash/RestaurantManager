@@ -20,6 +20,7 @@ mydb = mysql.connector.connect(
     password=PASSWORD,
     database="restaurant_manager",
 )
+
 mycursor = mydb.cursor()
 
 DISHES = [
